@@ -5,15 +5,29 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(background.jpg);
+  background-repeat: repeat;
+  background-size: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 48px;
 }
 
+.Back {
+  background-image: url(./background.jpg);
+  background-position: center; 
+  background-repeat: no-repeat;
+}
 
+p {
+  font-family: 'Countdown', arial;
+  font-size: 40px;
+  text-shadow: 4px 4px 4px #aaa;
+}

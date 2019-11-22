@@ -1,40 +1,37 @@
 import React from 'react';
 // import logo from './logo.svg';
 import Engaged from "./engaged.JPG";
-// import Background from "./background.jpg";
-import Countdown from 'react-countdown-now';
-
-
 import './App.css';
 
-
-function App() {
- 
+const App = () => {
+  
   return (
     <div className="App">
     
-      <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"></link>
       <h1>Giselle and Andrew</h1>
       <img src = {Engaged} alt="Engaged" width="525" height="400"/>
-      <h1>Countdown until our Wedding Day!</h1>
-      <Countdown date={Date.now() + 10000}/>
-
-     {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p> 
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-  </header> */ }
+      <h1>Countdown until our Wedding Day! </h1>
+      <p id ="countdown"></p>
     </div>
+    
   );
 }
+
+var countDownDate = new Date("May 25, 2020 10:00:00")
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("countdown").innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds ";
+  
+  if (distance <= 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "Just Married!";
+  } 
+
+},1000)
 
 export default App;
