@@ -2,6 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import Engaged from "./engaged.JPG";
 import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const App = () => {
   
@@ -12,6 +13,9 @@ const App = () => {
       <img src = {Engaged} alt="Engaged" width="525" height="400"/>
       <h1>Countdown until our Wedding Day! </h1>
       <p id ="countdown"></p>
+      <h2>RSVP Here</h2>
+
+      
     </div>
     
   );
