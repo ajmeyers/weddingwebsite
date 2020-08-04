@@ -2,26 +2,27 @@ import React from 'react';
 // import logo from './logo.svg';
 import Engaged from "./engaged.JPG";
 import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
+import ConnectToApi from './ConnectToApi.js'
+
 
 const App = () => {
   
   return (
-    <div className="App">
     
-      <h1>Giselle and Andrew</h1>
-      <img src = {Engaged} alt="Engaged" width="525" height="400"/>
-      <h1>Countdown until our Wedding Day! </h1>
-      <p id ="countdown"></p>
-      <h2>RSVP Here</h2>
-
-      
+    <div className="App">
+        <h1>Giselle and Andrew</h1>
+        <img src = {Engaged} alt="Engaged" width="525" height="400"/>
+        <h1>Countdown until our Wedding Day! </h1>
+        <p id ="countdown"></p>
+        <h2>RSVP Here</h2>
+        <h2>Random Name</h2>
+        <ConnectToApi/>
     </div>
     
   );
 }
 
-var countDownDate = new Date("May 25, 2020 10:00:00")
+var countDownDate = new Date("December 8, 2020 12:00:00")
 var x = setInterval(function() {
   var now = new Date().getTime();
   var distance = countDownDate - now;
